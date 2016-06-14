@@ -6,7 +6,11 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-
+/**
+ * Callable在ExecutorService中的简单用法
+ * @author along
+ *
+ */
 class MyCallable implements Callable<String> {
 	private int id;
 

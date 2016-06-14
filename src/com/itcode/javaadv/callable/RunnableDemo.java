@@ -2,7 +2,11 @@ package com.itcode.javaadv.callable;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
+/**
+ * Runnable在ExecutorService中的用法
+ * @author along
+ *
+ */
 class RunnableTest implements Runnable {
     protected int countDown = 10;
     private static int taskCount = 0;
