@@ -4,6 +4,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.FutureTask;
 
 /**
  * Callable与Future的联合用法
@@ -49,11 +50,17 @@ public class CallableAndFuture {
         CallableTask task1 = new CallableTask("FirstTask", 0);
         CallableTask task2 = new CallableTask("SecondTask", 1);
         CallableTask task3 = new CallableTask("ThirdTask", 2);
+
+        FutureTask futureTask1 = new FutureTask(task1);
         // 创建一个执行任务的线程池
         ExecutorService es = Executors.newFixedThreadPool(3);
         try {
             Future future1 = es.submit(task1);
             System.out.println(task1.getName() + ":的执行结果Future调用get方法:" + future1.get());
+
+            es.submit(futureTask1);
+            System.out.println(task1.getName() + ":的执行结果Future调用get方法:" + futureTask1.get());
+
 
             Future future2 = es.submit(task2);
             Thread.sleep(5000);
