@@ -60,7 +60,11 @@ public class CallableAndFuture {
 
             es.submit(futureTask1);
             System.out.println(task1.getName() + ":的执行结果Future调用get方法:" + futureTask1.get());
-
+          
+            //FutureTask的第二种使用方式
+            FutureTask<String> futureTask = new FutureTask<>(task1);
+            Thread thread = new Thread(futureTask);
+            thread.start();
 
             Future future2 = es.submit(task2);
             Thread.sleep(5000);
