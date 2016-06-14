@@ -7,26 +7,26 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-class TaskWithResult implements Callable<String> {
+class MyCallable implements Callable<String> {
 	private int id;
 
-	public TaskWithResult(int id) {
+	public MyCallable(int id) {
 		this.id = id;
 	}
 
 	@Override
 	public String call() throws Exception {
-		return "result of TaskWithResult " + id;
+		return "result of MyCallable " + id;
 	}
 }
 
-public class CallableTest {
+public class CallableDemo {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		ExecutorService exec = Executors.newCachedThreadPool();
 		ArrayList<Future<String>> results = new ArrayList<Future<String>>(); // Future
 																				// 相当于是用来存放Executor执行的结果的一种容器
 		for (int i = 0; i < 10; i++) {
-			results.add(exec.submit(new TaskWithResult(i)));
+			results.add(exec.submit(new MyCallable(i)));
 		}
 		for (Future<String> fs : results) {
 			if (fs.isDone()) {

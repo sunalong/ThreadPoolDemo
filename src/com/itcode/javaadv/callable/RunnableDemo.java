@@ -25,7 +25,7 @@ class RunnableTest implements Runnable {
     }
 }
 
-public class LiftOff {
+public class RunnableDemo {
     public static void main(String[] args) {
         ExecutorService exec = Executors.newFixedThreadPool(1);
         for (int i = 0; i < 5; i++) {
