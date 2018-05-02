@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f303222-8105-4162-bcb2-bc3d69a964ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ThreadPoolDemo.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/itcode/javaadv/callable/CallableAndFuture.java" afterPath="$PROJECT_DIR$/src/com/itcode/javaadv/callable/CallableAndFuture.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -21,8 +17,8 @@
       <file leaf-file-name="CallableAndFuture.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/itcode/javaadv/callable/CallableAndFuture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-244">
-              <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+            <state relative-caret-position="240">
+              <caret line="72" column="97" lean-forward="false" selection-start-line="72" selection-start-column="97" selection-end-line="72" selection-end-column="97" />
               <folding>
                 <element signature="e#498#499#0" expanded="true" />
                 <element signature="e#525#526#0" expanded="true" />
@@ -101,6 +97,7 @@
       <find>ThreadInner</find>
       <find>再在futureTask</find>
       <find>get</find>
+      <find>true</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -348,12 +345,12 @@
       <updated>1524464399941</updated>
       <workItem from="1524464404864" duration="3215000" />
       <workItem from="1524540808760" duration="143000" />
-      <workItem from="1525229543664" duration="3285000" />
+      <workItem from="1525229543664" duration="3916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6643000" />
+    <option name="totallyTimeSpent" value="7274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -563,8 +560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itcode/javaadv/callable/CallableAndFuture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-244">
-          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+        <state relative-caret-position="240">
+          <caret line="72" column="97" lean-forward="false" selection-start-line="72" selection-start-column="97" selection-end-line="72" selection-end-column="97" />
           <folding>
             <element signature="e#498#499#0" expanded="true" />
             <element signature="e#525#526#0" expanded="true" />

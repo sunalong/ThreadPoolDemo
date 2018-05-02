@@ -24,21 +24,21 @@ class CallableTask implements Callable {
 
     public String call() throws Exception {
         if (this.flag == 0) {
-            return "flag = 0";
+            return "flag = 0"+"  【"+Thread.currentThread().getName()+"】";
         }
         if (this.flag == 1) {
             try {
                 while (true) {
-                    System.out.println(name + ": looping..."+Thread.currentThread().getName());
+                    System.out.println(name + ": looping..."+"  【"+Thread.currentThread().getName()+"】");
                     Thread.sleep(2000);
                 }
             } catch (InterruptedException e) {
-                System.out.println(name + ":Interrupted");
+                System.out.println(name + ":Interrupted"+"  【"+Thread.currentThread().getName()+"】");
             }
             return "false";
         } else {
 //            throw new Exception(name + ":Bad flag value!");
-            return new Exception(name + ":Bad flag value!").toString();
+            return new Exception(name + ":Bad flag value!"+"  【"+Thread.currentThread().getName()+"】").toString();
         }
     }
 }
@@ -55,13 +55,12 @@ public class CallableAndFuture {
             // 创建一个执行任务的线程池
             ExecutorService es = Executors.newFixedThreadPool(3);
 
-
             Future future1 = es.submit(task1);
             System.out.println(task1.getName() + ":的执行结果Future调用get方法:" + future1.get());
 
-            FutureTask futureTask1 = new FutureTask(task1);
-            es.submit(futureTask1);
-            System.out.println(task1.getName() + ":的执行结果FutureTask调用get方法:" + futureTask1.get());
+            Future future2 = es.submit(task2);
+            Thread.sleep(5000);
+            System.out.println(task2.getName() + "：的执行结果Future调用cancel方法：" + future2.cancel(true));
 
             //FutureTask的第二种使用方式
             FutureTask<String> futureTask2 = new FutureTask<>(task1);
@@ -69,9 +68,9 @@ public class CallableAndFuture {
             thread.start();
             System.out.println(task1.getName() + ":的执行结果Future调用get方法:" + futureTask2.get());
 
-            Future future2 = es.submit(task2);
-            Thread.sleep(5000);
-            System.out.println(task2.getName() + "：的执行结果Future调用cancel方法：" + future2.cancel(true));
+            FutureTask futureTask1 = new FutureTask(task1);
+            es.submit(futureTask1);
+            System.out.println(task1.getName() + ":的执行结果FutureTask调用get方法:" + futureTask1.get());
 
             Future future3 = es.submit(task3);
             System.out.println(task3.getName() + "：的执行结果Future调用get方法：" + future3.get());
